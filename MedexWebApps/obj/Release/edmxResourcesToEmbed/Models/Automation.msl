@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AutomationModelStoreContainer" CdmEntityContainer="AutomationEntities1">
+    <EntitySetMapping Name="IT_Staff">
+      <EntityTypeMapping TypeName="AutomationModel.IT_Staff">
+        <MappingFragment StoreEntitySet="IT_Staff">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IT_Name" ColumnName="IT_Name" />
+          <ScalarProperty Name="Mobile_No" ColumnName="Mobile_No" />
+          <ScalarProperty Name="Sort_No" ColumnName="Sort_No" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IT_Weekly_Shift">
+      <EntityTypeMapping TypeName="AutomationModel.IT_Weekly_Shift">
+        <MappingFragment StoreEntitySet="IT_Weekly_Shift">
+          <ScalarProperty Name="IT_ID" ColumnName="IT_ID" />
+          <ScalarProperty Name="Week_ID" ColumnName="Week_ID" />
+          <ScalarProperty Name="Shift_ID" ColumnName="Shift_ID" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shifts">
+      <EntityTypeMapping TypeName="AutomationModel.Shift">
+        <MappingFragment StoreEntitySet="Shift">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Shift1" ColumnName="Shift" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Weeks">
+      <EntityTypeMapping TypeName="AutomationModel.Week">
+        <MappingFragment StoreEntitySet="Week">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Week_Name" ColumnName="Week_Name" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Start_Date" ColumnName="Start_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

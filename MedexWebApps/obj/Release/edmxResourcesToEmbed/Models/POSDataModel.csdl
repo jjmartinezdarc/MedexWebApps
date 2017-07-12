@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="POSDataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Receipt_Hdr_Vw">
+    <Key>
+      <PropertyRef Name="Receipt_No" />
+      <PropertyRef Name="Branch_ID" />
+      <PropertyRef Name="Receipt_Date" />
+      <PropertyRef Name="POS_Num" />
+      <PropertyRef Name="Cust_ID" />
+      <PropertyRef Name="Fulfill_Chan_ID" />
+      <PropertyRef Name="Cashier_ID" />
+      <PropertyRef Name="Date_Created" />
+      <PropertyRef Name="Net_Total" />
+      <PropertyRef Name="Voided_Receipt_No" />
+      <PropertyRef Name="Shift_Count" />
+      <PropertyRef Name="PA_ID" />
+      <PropertyRef Name="Picker_ID" />
+      <PropertyRef Name="Cashier" />
+      <PropertyRef Name="SAP_Code" />
+      <PropertyRef Name="Charge_To" />
+      <PropertyRef Name="Charges_Total" />
+      <PropertyRef Name="Free_Goods_Qty" />
+      <PropertyRef Name="Tender_Amount" />
+      <PropertyRef Name="Cost_Of_Sales" />
+      <PropertyRef Name="Cost_Of_Sales_Current" />
+      <PropertyRef Name="MAV_Of_Sales" />
+      <PropertyRef Name="Tax_Class" />
+      <PropertyRef Name="Govt_ID" />
+    </Key>
+    <Property Name="Receipt_No" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Branch_ID" Type="Int16" Nullable="false" />
+    <Property Name="Receipt_Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="POS_Num" Type="Byte" Nullable="false" />
+    <Property Name="Cust_ID" Type="Int32" Nullable="false" />
+    <Property Name="Fulfill_Chan_ID" Type="Int16" Nullable="false" />
+    <Property Name="Cashier_ID" Type="Int32" Nullable="false" />
+    <Property Name="Date_Created" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Net_Total" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="Voided_Receipt_No" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Shift_Count" Type="Byte" Nullable="false" />
+    <Property Name="PA_ID" Type="Int16" Nullable="false" />
+    <Property Name="Picker_ID" Type="Int16" Nullable="false" />
+    <Property Name="Cashier" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SAP_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Charge_To" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Gross_Total" Type="Decimal" Precision="38" Scale="4" />
+    <Property Name="Charges_Total" Type="Decimal" Precision="38" Scale="4" Nullable="false" />
+    <Property Name="Discounts_Total" Type="Double" />
+    <Property Name="Discounts_Vatable" Type="Double" />
+    <Property Name="Discounts_VAT_Exempt" Type="Decimal" Precision="38" Scale="6" />
+    <Property Name="Discounts_Zero_Rated" Type="Decimal" Precision="38" Scale="6" />
+    <Property Name="Vatable" Type="Decimal" Precision="38" Scale="6" />
+    <Property Name="Vat_Exempt" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Zero_Rated" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Vat" Type="Decimal" Precision="38" Scale="6" />
+    <Property Name="Free_Goods_Qty" Type="Decimal" Precision="38" Scale="2" Nullable="false" />
+    <Property Name="Tender_Amount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="MD_Purchase" Type="Boolean" />
+    <Property Name="Cost_Of_Sales" Type="Decimal" Precision="38" Scale="6" Nullable="false" />
+    <Property Name="Cost_Of_Sales_Current" Type="Decimal" Precision="38" Scale="6" Nullable="false" />
+    <Property Name="MAV_Of_Sales" Type="Decimal" Precision="38" Scale="6" Nullable="false" />
+    <Property Name="Vatable_Gross" Type="Decimal" Precision="38" Scale="6" />
+    <Property Name="Vat_Exempt_Gross" Type="Decimal" Precision="38" Scale="6" />
+    <Property Name="Zero_Rated_Gross" Type="Decimal" Precision="38" Scale="6" />
+    <Property Name="Vat_Gross" Type="Decimal" Precision="38" Scale="6" />
+    <Property Name="SC_Acq_Cost" Type="Decimal" Precision="38" Scale="6" />
+    <Property Name="Tax_Class" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Govt_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="POSDataEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Receipt_Hdr_Vw" EntityType="Self.Receipt_Hdr_Vw" />
+  </EntityContainer>
+</Schema>

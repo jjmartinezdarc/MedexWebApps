@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ecddf485a5c24fce86bf66f43c74e7bc" Name="Diagram1">
+        <EntityTypeShape EntityType="AutomationModel.IT_Staff" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutomationModel.IT_Weekly_Shift" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutomationModel.Shift" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutomationModel.Week" Width="1.5" PointX="0.75" PointY="6.875" IsExpanded="true" />
+        <AssociationConnector Association="AutomationModel.FK_IT_Weekly_Shift_IT_Staff" ManuallyRouted="false" />
+        <AssociationConnector Association="AutomationModel.FK_IT_Weekly_Shift_Shift" ManuallyRouted="false" />
+        <AssociationConnector Association="AutomationModel.FK_IT_Weekly_Shift_Week" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AutomationModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="IT_Staff">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="IT_Name" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Mobile_No" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Sort_No" Type="numeric" Precision="3" Scale="3" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IT_Weekly_Shift">
+    <Key>
+      <PropertyRef Name="IT_ID" />
+      <PropertyRef Name="Week_ID" />
+      <PropertyRef Name="Shift_ID" />
+    </Key>
+    <Property Name="IT_ID" Type="int" Nullable="false" />
+    <Property Name="Week_ID" Type="int" Nullable="false" />
+    <Property Name="Shift_ID" Type="int" Nullable="false" />
+    <Property Name="Remarks" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Shift">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Shift" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Week">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Week_Name" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="Start_Date" Type="date" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_IT_Weekly_Shift_IT_Staff">
+    <End Role="IT_Staff" Type="Self.IT_Staff" Multiplicity="1" />
+    <End Role="IT_Weekly_Shift" Type="Self.IT_Weekly_Shift" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IT_Staff">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="IT_Weekly_Shift">
+        <PropertyRef Name="IT_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IT_Weekly_Shift_Shift">
+    <End Role="Shift" Type="Self.Shift" Multiplicity="1" />
+    <End Role="IT_Weekly_Shift" Type="Self.IT_Weekly_Shift" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shift">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="IT_Weekly_Shift">
+        <PropertyRef Name="Shift_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IT_Weekly_Shift_Week">
+    <End Role="Week" Type="Self.Week" Multiplicity="1" />
+    <End Role="IT_Weekly_Shift" Type="Self.IT_Weekly_Shift" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Week">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="IT_Weekly_Shift">
+        <PropertyRef Name="Week_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AutomationModelStoreContainer">
+    <EntitySet Name="IT_Staff" EntityType="Self.IT_Staff" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IT_Weekly_Shift" EntityType="Self.IT_Weekly_Shift" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Shift" EntityType="Self.Shift" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Week" EntityType="Self.Week" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_IT_Weekly_Shift_IT_Staff" Association="Self.FK_IT_Weekly_Shift_IT_Staff">
+      <End Role="IT_Staff" EntitySet="IT_Staff" />
+      <End Role="IT_Weekly_Shift" EntitySet="IT_Weekly_Shift" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IT_Weekly_Shift_Shift" Association="Self.FK_IT_Weekly_Shift_Shift">
+      <End Role="Shift" EntitySet="Shift" />
+      <End Role="IT_Weekly_Shift" EntitySet="IT_Weekly_Shift" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IT_Weekly_Shift_Week" Association="Self.FK_IT_Weekly_Shift_Week">
+      <End Role="Week" EntitySet="Week" />
+      <End Role="IT_Weekly_Shift" EntitySet="IT_Weekly_Shift" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

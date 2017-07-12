@@ -1,0 +1,11 @@
+﻿@using MedexWebApps.ViewModels
+@model SMCMaxDateViewModel
+@{
+    ViewBag.Title = "MaxTranDate";
+}
+
+<h2>SMC Transactions</h2>
+
+<div class="alert alert-dismissible alert-success">
+    Lastest transaction date: <strong>@Model.MaxDate.ToString("MMMM dd, yyyy")</strong>
+</div>

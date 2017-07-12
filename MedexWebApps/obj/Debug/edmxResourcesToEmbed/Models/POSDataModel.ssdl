@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="POSDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'POSData.dbo.Receipt_Hdr_Vw' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Receipt_Hdr_Vw">
+    <Key>
+      <PropertyRef Name="Receipt_No" />
+      <PropertyRef Name="Branch_ID" />
+      <PropertyRef Name="Receipt_Date" />
+      <PropertyRef Name="POS_Num" />
+      <PropertyRef Name="Cust_ID" />
+      <PropertyRef Name="Fulfill_Chan_ID" />
+      <PropertyRef Name="Cashier_ID" />
+      <PropertyRef Name="Date_Created" />
+      <PropertyRef Name="Net_Total" />
+      <PropertyRef Name="Voided_Receipt_No" />
+      <PropertyRef Name="Shift_Count" />
+      <PropertyRef Name="PA_ID" />
+      <PropertyRef Name="Picker_ID" />
+      <PropertyRef Name="Cashier" />
+      <PropertyRef Name="SAP_Code" />
+      <PropertyRef Name="Charge_To" />
+      <PropertyRef Name="Charges_Total" />
+      <PropertyRef Name="Free_Goods_Qty" />
+      <PropertyRef Name="Tender_Amount" />
+      <PropertyRef Name="Cost_Of_Sales" />
+      <PropertyRef Name="Cost_Of_Sales_Current" />
+      <PropertyRef Name="MAV_Of_Sales" />
+      <PropertyRef Name="Tax_Class" />
+      <PropertyRef Name="Govt_ID" />
+    </Key>
+    <Property Name="Receipt_No" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Branch_ID" Type="smallint" Nullable="false" />
+    <Property Name="Receipt_Date" Type="smalldatetime" Nullable="false" />
+    <Property Name="POS_Num" Type="tinyint" Nullable="false" />
+    <Property Name="Cust_ID" Type="int" Nullable="false" />
+    <Property Name="Fulfill_Chan_ID" Type="smallint" Nullable="false" />
+    <Property Name="Cashier_ID" Type="int" Nullable="false" />
+    <Property Name="Date_Created" Type="smalldatetime" Nullable="false" />
+    <Property Name="Net_Total" Type="money" Nullable="false" />
+    <Property Name="Voided_Receipt_No" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Shift_Count" Type="tinyint" Nullable="false" />
+    <Property Name="PA_ID" Type="smallint" Nullable="false" />
+    <Property Name="Picker_ID" Type="smallint" Nullable="false" />
+    <Property Name="Cashier" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="SAP_Code" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Charge_To" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Gross_Total" Type="decimal" Precision="38" Scale="4" />
+    <Property Name="Charges_Total" Type="decimal" Precision="38" Scale="4" Nullable="false" />
+    <Property Name="Discounts_Total" Type="float" />
+    <Property Name="Discounts_Vatable" Type="float" />
+    <Property Name="Discounts_VAT_Exempt" Type="decimal" Precision="38" Scale="6" />
+    <Property Name="Discounts_Zero_Rated" Type="decimal" Precision="38" Scale="6" />
+    <Property Name="Vatable" Type="numeric" Precision="38" Scale="6" />
+    <Property Name="Vat_Exempt" Type="money" />
+    <Property Name="Zero_Rated" Type="money" />
+    <Property Name="Vat" Type="numeric" Precision="38" Scale="6" />
+    <Property Name="Free_Goods_Qty" Type="decimal" Precision="38" Scale="2" Nullable="false" />
+    <Property Name="Tender_Amount" Type="money" Nullable="false" />
+    <Property Name="MD_Purchase" Type="bit" />
+    <Property Name="Cost_Of_Sales" Type="decimal" Precision="38" Scale="6" Nullable="false" />
+    <Property Name="Cost_Of_Sales_Current" Type="decimal" Precision="38" Scale="6" Nullable="false" />
+    <Property Name="MAV_Of_Sales" Type="decimal" Precision="38" Scale="6" Nullable="false" />
+    <Property Name="Vatable_Gross" Type="numeric" Precision="38" Scale="6" />
+    <Property Name="Vat_Exempt_Gross" Type="decimal" Precision="38" Scale="6" />
+    <Property Name="Zero_Rated_Gross" Type="decimal" Precision="38" Scale="6" />
+    <Property Name="Vat_Gross" Type="numeric" Precision="38" Scale="6" />
+    <Property Name="SC_Acq_Cost" Type="decimal" Precision="38" Scale="6" />
+    <Property Name="Tax_Class" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="Govt_ID" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="POSDataModelStoreContainer">
+    <EntitySet Name="Receipt_Hdr_Vw" EntityType="Self.Receipt_Hdr_Vw" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Receipt_Hdr_Vw].[Receipt_No] AS [Receipt_No], 
+    [Receipt_Hdr_Vw].[Branch_ID] AS [Branch_ID], 
+    [Receipt_Hdr_Vw].[Receipt_Date] AS [Receipt_Date], 
+    [Receipt_Hdr_Vw].[POS_Num] AS [POS_Num], 
+    [Receipt_Hdr_Vw].[Cust_ID] AS [Cust_ID], 
+    [Receipt_Hdr_Vw].[Fulfill_Chan_ID] AS [Fulfill_Chan_ID], 
+    [Receipt_Hdr_Vw].[Cashier_ID] AS [Cashier_ID], 
+    [Receipt_Hdr_Vw].[Date_Created] AS [Date_Created], 
+    [Receipt_Hdr_Vw].[Net_Total] AS [Net_Total], 
+    [Receipt_Hdr_Vw].[Voided_Receipt_No] AS [Voided_Receipt_No], 
+    [Receipt_Hdr_Vw].[Shift_Count] AS [Shift_Count], 
+    [Receipt_Hdr_Vw].[PA_ID] AS [PA_ID], 
+    [Receipt_Hdr_Vw].[Picker_ID] AS [Picker_ID], 
+    [Receipt_Hdr_Vw].[Cashier] AS [Cashier], 
+    [Receipt_Hdr_Vw].[SAP_Code] AS [SAP_Code], 
+    [Receipt_Hdr_Vw].[Charge_To] AS [Charge_To], 
+    [Receipt_Hdr_Vw].[Gross_Total] AS [Gross_Total], 
+    [Receipt_Hdr_Vw].[Charges_Total] AS [Charges_Total], 
+    [Receipt_Hdr_Vw].[Discounts_Total] AS [Discounts_Total], 
+    [Receipt_Hdr_Vw].[Discounts_Vatable] AS [Discounts_Vatable], 
+    [Receipt_Hdr_Vw].[Discounts_VAT_Exempt] AS [Discounts_VAT_Exempt], 
+    [Receipt_Hdr_Vw].[Discounts_Zero_Rated] AS [Discounts_Zero_Rated], 
+    [Receipt_Hdr_Vw].[Vatable] AS [Vatable], 
+    [Receipt_Hdr_Vw].[Vat_Exempt] AS [Vat_Exempt], 
+    [Receipt_Hdr_Vw].[Zero_Rated] AS [Zero_Rated], 
+    [Receipt_Hdr_Vw].[Vat] AS [Vat], 
+    [Receipt_Hdr_Vw].[Free_Goods_Qty] AS [Free_Goods_Qty], 
+    [Receipt_Hdr_Vw].[Tender_Amount] AS [Tender_Amount], 
+    [Receipt_Hdr_Vw].[MD_Purchase] AS [MD_Purchase], 
+    [Receipt_Hdr_Vw].[Cost_Of_Sales] AS [Cost_Of_Sales], 
+    [Receipt_Hdr_Vw].[Cost_Of_Sales_Current] AS [Cost_Of_Sales_Current], 
+    [Receipt_Hdr_Vw].[MAV_Of_Sales] AS [MAV_Of_Sales], 
+    [Receipt_Hdr_Vw].[Vatable_Gross] AS [Vatable_Gross], 
+    [Receipt_Hdr_Vw].[Vat_Exempt_Gross] AS [Vat_Exempt_Gross], 
+    [Receipt_Hdr_Vw].[Zero_Rated_Gross] AS [Zero_Rated_Gross], 
+    [Receipt_Hdr_Vw].[Vat_Gross] AS [Vat_Gross], 
+    [Receipt_Hdr_Vw].[SC_Acq_Cost] AS [SC_Acq_Cost], 
+    [Receipt_Hdr_Vw].[Tax_Class] AS [Tax_Class], 
+    [Receipt_Hdr_Vw].[Govt_ID] AS [Govt_ID]
+    FROM [dbo].[Receipt_Hdr_Vw] AS [Receipt_Hdr_Vw]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

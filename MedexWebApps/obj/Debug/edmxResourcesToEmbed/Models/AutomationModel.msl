@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AutomationModelStoreContainer" CdmEntityContainer="AutomationEntities">
+    <EntitySetMapping Name="IT_Sched">
+      <EntityTypeMapping TypeName="AutomationModel.IT_Sched">
+        <MappingFragment StoreEntitySet="IT_Sched">
+          <ScalarProperty Name="WeekNum" ColumnName="WeekNum" />
+          <ScalarProperty Name="JJ" ColumnName="JJ" />
+          <ScalarProperty Name="Vic" ColumnName="Vic" />
+          <ScalarProperty Name="Ronel" ColumnName="Ronel" />
+          <ScalarProperty Name="Japheth" ColumnName="Japheth" />
+          <ScalarProperty Name="Julius" ColumnName="Julius" />
+          <ScalarProperty Name="CurWeek" ColumnName="CurWeek" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

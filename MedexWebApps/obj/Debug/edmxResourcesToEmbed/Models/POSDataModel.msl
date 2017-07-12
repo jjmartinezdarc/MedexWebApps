@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="POSDataModelStoreContainer" CdmEntityContainer="POSDataEntities">
+    <EntitySetMapping Name="Receipt_Hdr_Vw">
+      <EntityTypeMapping TypeName="POSDataModel.Receipt_Hdr_Vw">
+        <MappingFragment StoreEntitySet="Receipt_Hdr_Vw">
+          <ScalarProperty Name="Receipt_No" ColumnName="Receipt_No" />
+          <ScalarProperty Name="Branch_ID" ColumnName="Branch_ID" />
+          <ScalarProperty Name="Receipt_Date" ColumnName="Receipt_Date" />
+          <ScalarProperty Name="POS_Num" ColumnName="POS_Num" />
+          <ScalarProperty Name="Cust_ID" ColumnName="Cust_ID" />
+          <ScalarProperty Name="Fulfill_Chan_ID" ColumnName="Fulfill_Chan_ID" />
+          <ScalarProperty Name="Cashier_ID" ColumnName="Cashier_ID" />
+          <ScalarProperty Name="Date_Created" ColumnName="Date_Created" />
+          <ScalarProperty Name="Net_Total" ColumnName="Net_Total" />
+          <ScalarProperty Name="Voided_Receipt_No" ColumnName="Voided_Receipt_No" />
+          <ScalarProperty Name="Shift_Count" ColumnName="Shift_Count" />
+          <ScalarProperty Name="PA_ID" ColumnName="PA_ID" />
+          <ScalarProperty Name="Picker_ID" ColumnName="Picker_ID" />
+          <ScalarProperty Name="Cashier" ColumnName="Cashier" />
+          <ScalarProperty Name="SAP_Code" ColumnName="SAP_Code" />
+          <ScalarProperty Name="Charge_To" ColumnName="Charge_To" />
+          <ScalarProperty Name="Gross_Total" ColumnName="Gross_Total" />
+          <ScalarProperty Name="Charges_Total" ColumnName="Charges_Total" />
+          <ScalarProperty Name="Discounts_Total" ColumnName="Discounts_Total" />
+          <ScalarProperty Name="Discounts_Vatable" ColumnName="Discounts_Vatable" />
+          <ScalarProperty Name="Discounts_VAT_Exempt" ColumnName="Discounts_VAT_Exempt" />
+          <ScalarProperty Name="Discounts_Zero_Rated" ColumnName="Discounts_Zero_Rated" />
+          <ScalarProperty Name="Vatable" ColumnName="Vatable" />
+          <ScalarProperty Name="Vat_Exempt" ColumnName="Vat_Exempt" />
+          <ScalarProperty Name="Zero_Rated" ColumnName="Zero_Rated" />
+          <ScalarProperty Name="Vat" ColumnName="Vat" />
+          <ScalarProperty Name="Free_Goods_Qty" ColumnName="Free_Goods_Qty" />
+          <ScalarProperty Name="Tender_Amount" ColumnName="Tender_Amount" />
+          <ScalarProperty Name="MD_Purchase" ColumnName="MD_Purchase" />
+          <ScalarProperty Name="Cost_Of_Sales" ColumnName="Cost_Of_Sales" />
+          <ScalarProperty Name="Cost_Of_Sales_Current" ColumnName="Cost_Of_Sales_Current" />
+          <ScalarProperty Name="MAV_Of_Sales" ColumnName="MAV_Of_Sales" />
+          <ScalarProperty Name="Vatable_Gross" ColumnName="Vatable_Gross" />
+          <ScalarProperty Name="Vat_Exempt_Gross" ColumnName="Vat_Exempt_Gross" />
+          <ScalarProperty Name="Zero_Rated_Gross" ColumnName="Zero_Rated_Gross" />
+          <ScalarProperty Name="Vat_Gross" ColumnName="Vat_Gross" />
+          <ScalarProperty Name="SC_Acq_Cost" ColumnName="SC_Acq_Cost" />
+          <ScalarProperty Name="Tax_Class" ColumnName="Tax_Class" />
+          <ScalarProperty Name="Govt_ID" ColumnName="Govt_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
